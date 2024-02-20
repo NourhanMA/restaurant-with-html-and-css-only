@@ -7,31 +7,134 @@
     <title>Order</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-    <div class="nav-bar-container">
-        <a class="logo" href="http://127.0.0.1:5500/home.html">
-        </a>
-        <div class="nav-bar">
-            <div class="Home">
-                <a href="http://127.0.0.1:5500/home.html">Home</a>
+    <div class="main-container">
+        <div class="nav-bar-container">
+            <a class="logo" href="http://127.0.0.1:5500/home.html">
+            </a>
+            <div class="nav-bar">
+                <div class="home">
+                    <a href="http://127.0.0.1:5500/home.html">Home</a>
+                </div>
+                <div class="about">
+                    <a href="http://127.0.0.1:5500/about.html">About Us</a>
+                </div>
+                <div class="menu">
+                    <a href="http://127.0.0.1:5500/menu.html">Menu</a>
+                </div>
+                <div class="order">
+                    <a href="http://127.0.0.1:5500/order.html">Order Now</a>
+                </div>
+
+                <div class="contact-us">
+                    <a href="http://127.0.0.1:5500/contact-us.html">Contact Us</a>
+                </div>
+                <div class="login">
+                    <a href="http://127.0.0.1:5500/login.html">Login</a>
+                </div>
+                <div class="register">
+                    <a href="http://127.0.0.1:5500/register.html">Register</a>
+                </div>
             </div>
-            <!-- <div class="login">
-                <a href="http://127.0.0.1:5500/login.html">Login</a>
+        </div>
+
+
+        <div class="form-container">
+            <div class="welcome">
+                <p>Order Now</p>
+                <div class="order-image">
+                    <img src="images/food.jpg" alt="">
+                </div>
             </div>
-            <div class="register">
-                <a href="http://127.0.0.1:5500/register.html">Register</a>
-            </div> -->
-            <div class="about">
-                <a href="http://127.0.0.1:5500/about.html">About</a>
-            </div>
-            <div class="contact-us">
-                <a href="http://127.0.0.1:5500/contact-us.html">Contact Us</a>
+            <div class="form-data">
+                <form action="">
+                    <div class="row">
+                        <label for="fullname">Enter your name</label>
+                        <input type="fullname" required id="fullname">
+                    </div>
+
+                    <div class="row">
+                        <label for="mobile">Enter your mobile number</label>
+                        <input type="number" required pattern="[^ @]*@[^ @]*" id="mobile">
+                    </div>
+
+                    <div class="row">
+                        <label for="address">Enter your address</label>
+                        <input type="text" required id="address">
+                    </div>
+                    <!--  -->
+                    <div class="row-checkbox">
+                        <div class="type">
+                            <input type="checkbox" id="Ratatouille">
+                            <label for="Ratatouille"> Ratatouille</label>
+                        </div>
+                        <div class="type">
+
+                            <input type="checkbox" id="Salmon">
+                            <label for="Salmon"> Salmon</label>
+                        </div>
+                        <div class="type">
+
+                            <input type="checkbox" id="Pasta">
+                            <label for="Pasta"> Pasta</label>
+                        </div>
+                        <div class="type">
+
+                            <input type="checkbox" id="Kofta">
+                            <label for="Kofta"> Kofta</label>
+                        </div>
+                        <div class="type">
+
+                            <input type="checkbox" id="Shish tawook">
+                            <label for="Shish tawook"> Shish tawook</label>
+                        </div>
+                        <div class="type">
+
+                            <input type="checkbox" id="lasagna">
+                            <label for="lasagna"> lasagna</label>
+                        </div>
+                        <div class="type">
+
+                            <input type="checkbox" id="Italian pizza">
+                            <label for="Italian pizza"> Italian pizza</label>
+                        </div>
+                        <div class="type">
+
+                            <input type="checkbox" id="Pistachio Pesto">
+                            <label for="Pistachio Pesto"> Pistachio Pesto</label>
+                        </div>
+                        <div class="type">
+
+                            <input type="checkbox" id="Chicken roll">
+                            <label for="Chicken roll"> Chicken roll</label>
+                        </div>
+                        <div class="type">
+
+                            <input type="checkbox" id="Shrimp">
+                            <label for="Shrimp"> Shrimp</label>
+                        </div>
+                        <div class="type">
+
+                            <input type="checkbox" id="Steak">
+                            <label for="Steak"> Steak</label>
+                        </div>
+                        <div class="type">
+
+                            <input type="checkbox" id="Kabab">
+                            <label for="Kabab"> Kabab</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a href="http://127.0.0.1:5500/thankyou.html">Confirm order</a>
+                        <!-- <input type="submit"> -->
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

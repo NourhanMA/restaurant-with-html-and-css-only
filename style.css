@@ -17,6 +17,14 @@
   background-size: cover;
   margin: auto;
 }
+.main-container input::-webkit-outer-spin-button,
+.main-container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.main-container input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
 .main-container .nav-bar-container {
   width: 100%;
   height: 10vh;
@@ -44,6 +52,69 @@
   background-image: url(images/logo.jpg);
   background-repeat: no-repeat;
   background-size: contain;
+}
+@keyframes image-slider {
+  0% {
+    transform: translateX(0);
+  }
+  16.66% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100vw);
+  }
+  50% {
+    transform: translateX(-200vw);
+  }
+  66.66% {
+    transform: translateX(-200vw);
+  }
+  83.33% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.main-container .image-slider {
+  width: 100%;
+  margin-top: 5vh;
+  height: 85vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.main-container .image-slider .slides {
+  display: flex;
+  animation: 12s image-slider 3s infinite;
+}
+.main-container .image-slider .slides .slide {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #f9abab;
+  width: 100vw;
+}
+.main-container .image-slider .slides .slide .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  padding: 2vw;
+}
+.main-container .image-slider .slides .slide .content p {
+  font-size: 5vw;
+  color: #fff;
+}
+.main-container .image-slider .slides .slide .image {
+  width: 40vw;
+  height: 75vh;
+}
+.main-container .image-slider .slides .slide .image img {
+  max-width: 100%;
+  height: 100%;
 }
 .main-container .form-container {
   display: flex;
@@ -76,11 +147,12 @@
   pointer-events: none;
   cursor: none;
 }
-.main-container .form-container .form-data form .row input {
+.main-container .form-container .form-data form .row input,
+.main-container .form-container .form-data form .row a {
   margin-bottom: 1vw;
   border: 0.1vw solid #ffbaaf;
   border-radius: 0.5vw;
-  height: 5vh;
+  height: 3vw;
   width: 100%;
   padding: 1vw;
   font-size: 1vw;
@@ -88,17 +160,31 @@
   align-items: center;
   justify-content: center;
 }
-.main-container .form-container .form-data form .row input:focus {
+.main-container .form-container .form-data form .row input:focus,
+.main-container .form-container .form-data form .row a:focus {
   border: 0.1vw solid #ff5e5e;
 }
-.main-container .form-container .form-data form .row input[type=submit] {
+.main-container .form-container .form-data form .row input[type=submit],
+.main-container .form-container .form-data form .row a[type=submit] {
   margin-top: 3vw;
   background-color: #ff7171;
   color: #fff;
   cursor: pointer;
   font-size: 1.2vw;
 }
-.main-container .form-container .form-data form .row input[type=submit]:hover {
+.main-container .form-container .form-data form .row input[type=submit]:hover,
+.main-container .form-container .form-data form .row a[type=submit]:hover {
+  background-color: #ff5e5e;
+}
+.main-container .form-container .form-data form .row a {
+  margin-top: 3vw;
+  background-color: #ff7171;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2vw;
+  text-decoration: none;
+}
+.main-container .form-container .form-data form .row a:hover {
   background-color: #ff5e5e;
 }
 .main-container .form-container .form-data form .row.forget-password {
@@ -107,6 +193,18 @@
 .main-container .form-container .form-data form .row.forget-password p {
   font-size: 1vw;
   cursor: pointer;
+}
+.main-container .form-container .form-data form .row-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+.main-container .form-container .form-data form .row-checkbox .type {
+  width: 50%;
+}
+.main-container .form-container .form-data form .row-checkbox .type label {
+  padding: 0 1vw;
 }
 .main-container .form-container .welcome {
   margin: 2vw;
@@ -131,4 +229,177 @@
 .main-container .form-container .welcome .image img {
   width: 100%;
   height: 100%;
+}
+.main-container .form-container .welcome .order-image {
+  width: 26vw;
+  height: 35vw;
+}
+.main-container .form-container .welcome .order-image img {
+  width: 100%;
+  height: 100%;
+}
+.main-container .menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 85vh;
+  overflow: scroll;
+  width: 100%;
+}
+.main-container .menu-container .dish {
+  width: 25vw;
+  height: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.1vw #fff solid;
+  border-radius: 1vw;
+  margin: 2vw;
+}
+.main-container .menu-container .dish .image {
+  width: 20vw;
+  height: 20vw;
+  display: flex;
+  justify-content: center;
+}
+.main-container .menu-container .dish .image img {
+  max-width: 100%;
+  min-width: 80%;
+  height: 100%;
+  border-radius: 2vw;
+}
+.main-container .menu-container .dish .discription {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-container .menu-container .dish .discription p {
+  font-size: 1.3vw;
+  padding: 1vw;
+}
+.main-container .message {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-container .message p {
+  font-size: 5vw;
+  color: #ff5e5e;
+}
+.main-container .about-container {
+  display: flex;
+  width: 100%;
+  margin-top: 3vw;
+  flex-direction: column;
+}
+.main-container .about-container .row-about {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3vw;
+}
+.main-container .about-container .row-about .content-container {
+  width: 44%;
+}
+.main-container .about-container .row-about .content-container .content {
+  width: 100%;
+  border: 0.3vw solid #fff;
+  border-radius: 2vw;
+  min-height: 18vw;
+}
+.main-container .about-container .row-about .content-container .content p {
+  padding: 2vw;
+  font-size: 1.3vw;
+}
+.main-container .about-container .images {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.main-container .about-container .images .image {
+  width: 20vw;
+  height: 20vw;
+  display: flex;
+  justify-content: center;
+}
+.main-container .about-container .images .image img {
+  max-width: 100%;
+  min-width: 80%;
+  height: 100%;
+  border-radius: 2vw;
+}
+.main-container .contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 3vw;
+}
+.main-container .contact-container .contact-info {
+  width: 80%;
+  margin-bottom: 3vw;
+}
+.main-container .contact-container .contact-info .intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.main-container .contact-container .contact-info .intro p {
+  font-size: 2vw;
+}
+.main-container .contact-container .contact-form {
+  display: flex;
+  margin: auto 0;
+}
+.main-container .contact-container .contact-form form {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .contact-container .contact-form form .row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.main-container .contact-container .contact-form form .row input,
+.main-container .contact-container .contact-form form .row textarea {
+  margin-bottom: 1vw;
+  border: 0.1vw solid #ffbaaf;
+  border-radius: 0.5vw;
+  height: 3vw;
+  width: 100%;
+  padding: 1vw;
+  font-size: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-container .contact-container .contact-form form .row input:focus,
+.main-container .contact-container .contact-form form .row textarea:focus {
+  border: 0.1vw solid #ff5e5e;
+}
+.main-container .contact-container .contact-form form .row input[type=submit],
+.main-container .contact-container .contact-form form .row textarea[type=submit] {
+  margin-top: 3vw;
+  background-color: #ff7171;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2vw;
+}
+.main-container .contact-container .contact-form form .row input[type=submit]:hover,
+.main-container .contact-container .contact-form form .row textarea[type=submit]:hover {
+  background-color: #ff5e5e;
+}
+.main-container .contact-container .contact-form form .row textarea {
+  height: 10vw;
+  resize: none;
 }/*# sourceMappingURL=style.css.map */

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registeration</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,17 +15,27 @@
             <a class="logo" href="http://127.0.0.1:5500/home.html">
             </a>
             <div class="nav-bar">
-                <div class="Home">
+                <div class="home">
                     <a href="http://127.0.0.1:5500/home.html">Home</a>
+                </div>
+                <div class="about">
+                    <a href="http://127.0.0.1:5500/about.html">About Us</a>
+                </div>
+                <div class="menu">
+                    <a href="http://127.0.0.1:5500/menu.html">Menu</a>
+                </div>
+                <div class="order">
+                    <a href="http://127.0.0.1:5500/order.html">Order Now</a>
+                </div>
+
+                <div class="contact-us">
+                    <a href="http://127.0.0.1:5500/contact-us.html">Contact Us</a>
+                </div>
+                <div class="login">
+                    <a href="http://127.0.0.1:5500/login.html">Login</a>
                 </div>
                 <div class="register">
                     <a href="http://127.0.0.1:5500/register.html">Register</a>
-                </div>
-                <div class="about">
-                    <a href="http://127.0.0.1:5500/about.html">About</a>
-                </div>
-                <div class="contact-us">
-                    <a href="http://127.0.0.1:5500/contact-us.html">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -33,13 +43,13 @@
 
         <div class="form-container">
             <div class="welcome">
-                <p>Welcome back</p>
+                <p>Create Account</p>
                 <div class="image">
                     <img src="images/login.jpg" alt="">
                 </div>
             </div>
             <div class="form-data">
-                <form action="">
+                <form action="http://127.0.0.1:5500/home.html" method="post">
                     <div class="row">
                         <label for="fullname">Enter your name</label>
                         <input type="fullname" required id="fullname">
@@ -47,7 +57,7 @@
 
                     <div class="row">
                         <label for="email">Enter your E-Mail</label>
-                        <input type="email" required="[^ @]*@[^ @]*" id="email">
+                        <input type="email" required pattern="[^ @]*@[^ @]*" id="email">
                     </div>
 
                     <div class="row">
@@ -55,8 +65,8 @@
                         <input type="password" required id="password">
                     </div>
                     <div class="row">
-                        <label for="password">Confrim password</label>
-                        <input type="password" required id="password">
+                        <label for="confirm-password">Confrim password</label>
+                        <input type="password" required id="confirm-password">
                     </div>
 
                     <div class="row">
